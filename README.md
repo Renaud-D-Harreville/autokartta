@@ -1,3 +1,11 @@
+# Overview
+
+Karttapullautin (http://www.routegadget.net/karttapullautin/) is a software that enables to create an orienteering map 
+from Lidar data. 
+
+Here, the goal is to automate the download and the use of such software in France area.
+
+
 # Install
 
 To install this package, you can use the setup.sh script with : 
