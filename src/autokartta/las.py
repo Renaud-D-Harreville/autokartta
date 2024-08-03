@@ -49,6 +49,10 @@ class LasDownloader:
     def download(self) -> Path:
         working_directory: Path = self._create_working_directory()
         for url in self.urls:
-            wget.download(url, str(working_directory))
+            try:
+                wget.download(url, str(working_directory))
+            except Exception as err:
+                print("Cannot download url : ", url)
+                print("Error : ", str(err))
         return working_directory
 

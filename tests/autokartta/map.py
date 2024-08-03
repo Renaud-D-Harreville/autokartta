@@ -1,5 +1,5 @@
 from pathlib import Path
-from autokartta.map import MapsCreator
+from autokartta.map import MapsCreator, RustMapCreator
 from autokartta.las import LasDownloader
 
 
@@ -9,6 +9,20 @@ def test_main():
     maps_creator = MapsCreator(las_downloader, output_directory)
     maps_creator.build(max_worker=4)
 
+
+class TestRustMapCreator:
+
+    def test_small_build(self):
+        output_directory: Path = Path("/home/renaud/projects/perso/autokartta/tests/resources/outputs/test-small-build")
+        las_input_directory: Path = Path("/home/renaud/projects/perso/karttapullautin/in/")
+        maps_creator = RustMapCreator(output_directory, las_input_directory)
+        maps_creator.build()
+
+    def test_big_build(self):
+        output_directory: Path = Path("/home/renaud/projects/perso/autokartta/tests/resources/outputs/test-big-build")
+        las_input_directory: Path = Path("/tmp/autokartta-tmp/las_files/5f592b25-f2a2-4ed4-b726-3fd89da81e88/")
+        maps_creator = RustMapCreator(output_directory, las_input_directory)
+        maps_creator.build()
 
 
 # def test_main():

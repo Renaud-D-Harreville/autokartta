@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 
 tests/resources/test-output-dir
+tests/resources/outputs
 __pycache__/
 *.py[cod]
 *$py.class
