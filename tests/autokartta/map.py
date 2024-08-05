@@ -12,6 +12,12 @@ def test_main():
 
 class TestRustMapCreator:
 
+    def test_carte_perso(self):
+        output_directory: Path = Path("/home/renaud/projects/perso/autokartta/tests/resources/outputs/test-carte-perso")
+        las_input_directory: Path = Path("/tmp/autokartta-tmp/las_files/ed315f09-5042-49bc-bd77-96c41905aec5")
+        maps_creator = RustMapCreator(output_directory, las_input_directory)
+        maps_creator.build()
+
     def test_small_build(self):
         output_directory: Path = Path("/home/renaud/projects/perso/autokartta/tests/resources/outputs/test-small-build")
         las_input_directory: Path = Path("/home/renaud/projects/perso/karttapullautin/in/")

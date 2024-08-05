@@ -5,7 +5,7 @@ import wget
 
 class LasDownloader:
 
-    URL_TEMPLATE = "https://storage.sbg.cloud.ovh.net/v1/AUTH_63234f509d6048bca3c9fd7928720ca1/ppk-lidar/QM/LHD_FXX_<XXXX>_<YYYY>_PTS_O_LAMB93_IGN69.copc.laz"
+    URL_TEMPLATE = "https://storage.sbg.cloud.ovh.net/v1/AUTH_63234f509d6048bca3c9fd7928720ca1/ppk-lidar/RN/LHD_FXX_<XXXX>_<YYYY>_PTS_O_LAMB93_IGN69.copc.laz"
     WORKING_PATH: Path = Path("/tmp/autokartta-tmp/las_files")
 
     def __init__(self, x1: int, y1: int, x2: int, y2: int):

@@ -30,3 +30,5 @@ predefined area (see the function `test_main` in the file `src/autokartta/map.py
 
 You can change the area (make sur it is not too big, because one tile use around one hour of CPU already ! ...) 
 by changing the tiles numbers ()
+
+Here is the link to know wich tiles you will need : https://diffusion-lidarhd.ign.fr/
